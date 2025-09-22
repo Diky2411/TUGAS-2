@@ -1,0 +1,56 @@
+/* Membuat style. */
+
+body {
+    background-color: #fafafa;
+}
+
+/* Aspek rasio untuk profil dan feed */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.feed-photo-container img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Efek overlay gelap pada layer atas postingan */
+.feed-photo-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.feed-photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.feed-photo-container:hover .feed-photo-overlay {
+    opacity: 1;
+}
+
+.feed-photo-stats span {
+    margin: 0 10px;
+    font-size: 1.1rem;
+}
+
+/* Mengatur ulang lebar tombol pada layar besar agar tidak 100% */
+@media (min-width: 992px) {
+    .w-lg-auto {
+        width: auto !important;
+    }
+}
