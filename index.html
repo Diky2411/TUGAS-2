@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas 1 Pemrograman Web</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      height: 100vh;
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+      overflow: hidden;
+    }
+
+    /* Aurora effect */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(120deg, rgba(0,255,200,0.3), rgba(0,150,255,0.2), rgba(255,0,255,0.2));
+      mix-blend-mode: screen;
+      opacity: 0.5;
+      z-index: 0;
+    }
+
+    /* Stars */
+    .stars-small {
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-shadow: 
+        50px 100px white,
+        120px 200px white,
+        250px 80px white,
+        400px 150px white,
+        600px 300px white,
+        800px 100px white,
+        950px 250px white,
+        1100px 400px white,
+        1300px 200px white,
+        1400px 350px white,
+        1600px 120px white,
+        1800px 280px white;
+      animation: twinkle 3s infinite ease-in-out alternate;
+      z-index: 0;
+    }
+
+    /* Bintang agak besar */
+    .stars-medium {
+      width: 3px;
+      height: 3px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-shadow: 
+        200px 180px white,
+        500px 250px white,
+        750px 320px white,
+        1000px 140px white,
+        1250px 260px white,
+        1500px 220px white;
+      animation: twinkle 4s infinite ease-in-out alternate;
+      z-index: 0;
+    }
+
+    /* Bintang besar */
+    .stars-big {
+      width: 4px;
+      height: 4px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-shadow: 
+        300px 220px white,
+        800px 180px white,
+        1150px 300px white,
+        1450px 200px white;
+      animation: twinkle 5s infinite ease-in-out alternate;
+      z-index: 0;
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.3; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1.2); }
+    }
+    header {
+      background: rgba(44, 62, 80, 0.7);
+      color: white;
+      padding: 20px 0;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255,255,255,0.85);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      position: relative;
+      z-index: 1;
+    }
+
+    a {
+      display: block;
+      margin: 15px 0;
+      padding: 12px;
+      text-decoration: none;
+      background: #3498db;
+      color: white;
+      border-radius: 6px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background: #2980b9;
+    }
+
+    p {
+      color: #333;
+      font-size: 14px;
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars-small"></div>
+  <div class="stars-medium"></div>
+  <div class="stars-big"></div>
+
+  <header>
+    <h1>TUGAS 2 PRAKTIKUM PEMROGRAMAN WEB</h1>
+    <h2>Muhammad Diky Anwar</h2>
+    <h2>2411102441144</h2>
+  </header>
+
+  <div class="container">
+    <a href="TUGAS 2/Bootstrap/index.html">Profil Instagram(Boostrap)</a>
+    <a href="TUGAS 2/Tailwind/index.html">Profil Instagram(Tailwind)</a>
+  </div>
+</body>
+</html>
